@@ -3,23 +3,23 @@ local gameId = game.PlaceId
 if gameId == 116495829188952 then
     print("Game - Dead Rails Loading...")
 wait(1)
-print("Script")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/refs/heads/main/Dead%20Rails%20Loader"))()
 elseif gameId == 2413927524 then
     print("Game - The Rake REMASTERED Loading...")
-wait(2)
+wait(1)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/refs/heads/main/The%20Rake%20REMASTERED"))()
 elseif gameId == 16732694052 then
     print("Game - Fisch Loading...")
-wait(2)
+wait(1)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/refs/heads/main/Fisch.lua"))()
 elseif gameId == 6516141723 then
     print("Game - Doors Loading...")
 wait(1)
---
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/refs/heads/main/Doors"))()
 elseif gameId == 5233782396 then
     print("Game - Creatures Of Sonaria Loading...")
 wait(1)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/refs/heads/main/Creatures%20Of%20Sonaria"))()
 else
-    game.Players.LocalPlayer:Kick("MoonLight | Unsupported game! Support Game - Dead Rails / The Rake / Fisch / Doors | Good Luck!")
+    game.Players.LocalPlayer:Kick("MoonLight | Unsupported game! Support Game - Dead Rails / The Rake / Fisch / Doors / Creatures Of Sonaria | Good Luck!")
 end
