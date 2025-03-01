@@ -6,14 +6,14 @@ if game.GameId == 847722000 then
 	if syn then
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "Info",
-			Text = "You are a synapse x user! This script will 100% work",
-			Duration = 5
+			Text = "The Rake 01.03.2025",
+			Duration = 1
 		})
 	else
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "Info",
-			Text = "You are not a synapse x user. This script is likely not to work",
-			Duration = 5
+			Text = "Good Luck",
+			Duration = 1
 		})
 	end
 
@@ -238,10 +238,10 @@ if game.GameId == 847722000 then
 	})
 
 	--Tabs
-	local PlayerTab = Window:CreateTab("Player", 11252440515)
-	local ClientTab = Window:CreateTab("Client", 4483345998)
-	local ExploitsTab = Window:CreateTab("Exploits", 11252440817)
-	local SettingsTab = Window:CreateTab("Settings", 11252440305)
+	local PlayerTab = Window:CreateTab("Main", 11252440515)
+	local ClientTab = Window:CreateTab("Player", 4483345998)
+	local ExploitsTab = Window:CreateTab("Чэты", 11252440817)
+	local SettingsTab = Window:CreateTab("Other", 11252440305)
 
 	ClientTab:CreateToggle({
 		Name = "FreeCam",
@@ -1247,7 +1247,7 @@ if game.GameId == 847722000 then
 	end)
 
 	SettingsTab:CreateButton({
-		Name = "Unload Gui",
+		Name = "Destroy Gui",
 		Callback = function()
 			DestroyUI()
 		end,
