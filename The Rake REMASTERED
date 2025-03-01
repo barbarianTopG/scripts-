@@ -1,4 +1,24 @@
-local Me = {
+if game.GameId == 847722000 then
+	if getgenv().RakeGui then
+		return
+	end
+
+	if syn then
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Info",
+			Text = "You are a synapse x user! This script will 100% work",
+			Duration = 5
+		})
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Info",
+			Text = "You are not a synapse x user. This script is likely not to work",
+			Duration = 5
+		})
+	end
+
+
+	local Me = {
 		LocalPlayer = game.Players.LocalPlayer,
 		Character = game.Players.LocalPlayer.Character,
 	}
