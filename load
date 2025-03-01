@@ -7,7 +7,7 @@ print("Script")
 elseif gameId == 2413927524 then
     print("Game - The Rake REMASTERED Loading...")
 wait(2)
-print("Script")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/refs/heads/main/The%20Rake%20REMASTERED"))()
 elseif gameId == 2753915549 then
     print("Game - Blox Fruit Loading...")
 wait(1)
