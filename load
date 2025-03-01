@@ -1,0 +1,9 @@
+local gameId = game.PlaceId
+
+if gameId == 116495829188952 then
+    print("Game - Dead Rails Loading...")
+elseif gameId == 2413927524 then
+    print("Game - The Rake REMASTERED Loading...")
+else
+    game.Players.LocalPlayer:Kick("Несовместимая игра.") -- Кикаем игрока с сообщением
+end
