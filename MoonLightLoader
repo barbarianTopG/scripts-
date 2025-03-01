@@ -15,7 +15,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/re
 elseif gameId == 6516141723 then
     print("Game - Doors Loading...")
 wait(1)
-print("script")
+--
+elseif gameId == 246534 then
+    print("Game - Creatures Of Sonaria Loading...")
+wait(1)
+--
 else
     game.Players.LocalPlayer:Kick("MoonLight | Unsupported game! Support Game - Dead Rails / The Rake / Fisch / Doors | Good Luck!")
 end
