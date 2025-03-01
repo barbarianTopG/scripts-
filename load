@@ -2,8 +2,24 @@ local gameId = game.PlaceId
 
 if gameId == 116495829188952 then
     print("Game - Dead Rails Loading...")
+wait(1)
+print("Script")
 elseif gameId == 2413927524 then
     print("Game - The Rake REMASTERED Loading...")
+wait(2)
+print("Script")
+elseif gameId == 2753915549 then
+    print("Game - Blox Fruit Loading...")
+wait(1)
+print("script")
+elseif gameId == 16732694052 then
+    print("Game - Fisch Loading...")
+wait(2)
+print("script")
+elseif gameId == 6516141723 then
+    print("Game - Doors Loading...")
+wait(1)
+print("script")
 else
-    game.Players.LocalPlayer:Kick("Несовместимая игра.") -- Кикаем игрока с сообщением
+    game.Players.LocalPlayer:Kick("MoonLight | Unsupported game! Support Game - Dead Rails / The Rake / Blox Fruit / Fisch / Doors | Good Luck!")
 end
