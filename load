@@ -11,7 +11,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/re
 elseif gameId == 16732694052 then
     print("Game - Fisch Loading...")
 wait(2)
-print("script")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vodi4kasy1/scripts/refs/heads/main/Fisch.lua"))()
 elseif gameId == 6516141723 then
     print("Game - Doors Loading...")
 wait(1)
