@@ -13059,15 +13059,3 @@ task.spawn(function()
 	minimizeHolder()
 	if IsOnMobile then notify("Unstable Device", "On mobile, Infinite Yield may have issues or features that are not functioning correctly.") end
 end)
-
-local OldNamecallTP;
-OldNamecallTP = hookmetamethod(game, '__namecall', newcclosure(function(self, ...)
-    local Arguments = {...}
-    local Method =  getnamecallmethod()
-        
-    if Method == "InvokeServer" and Arguments[1] == "idklolbrah2de" then
-        return "  ___XP DE KEY"
-    end
-        
-    return OldNamecallTP(self, ...)
-end))
