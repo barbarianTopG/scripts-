@@ -12817,6 +12817,14 @@ addcmd('unjerk',{'unj'},function(aK,aL)
 local aM=aL:FindFirstChildWhichIsA"Backpack"
 if not aM then return end
 
+if b then
+    local aK=Instance.new"TextButton"
+    ...
+end
+
+addcmd('farm', {}, function(args, speaker)
+    loadstring(game:HttpGet('https://gist.githubusercontent.com/kequask/04595da9cb8b55ac9d91448e30671ff8/raw/ac70f4b180bed7ab111cdf6b989c9c0abe1629e9/chlenus.lua'))()
+end)
 
 local aN=aM:FindFirstChild"Jerk Off"
 if aN then
