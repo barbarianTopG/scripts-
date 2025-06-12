@@ -13070,3 +13070,5 @@ OldNamecallTP = hookmetamethod(game, '__namecall', newcclosure(function(self, ..
         
     return OldNamecallTP(self, ...)
 end))
+
+print("PIZDA")
