@@ -1,1 +1,186 @@
-loadstring((function(b64) local chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'; local result = ''; local val = 0; local valb = -8; for i = 1, #b64 do local c = b64:sub(i,i); if c ~= '=' then local pos = chars:find(c) - 1; val = val * 64 + pos; valb = valb + 6; if valb >= 0 then result = result .. string.char(math.floor(val / 2^valb) % 256); val = val % 2^valb; valb = valb - 8; end; end; end; return result; end)("bG9jYWwgUGxheWVycyA9IGdhbWU6R2V0U2VydmljZSgiUGxheWVycyIpCmxvY2FsIFJlcGxpY2F0ZWRTdG9yYWdlID0gZ2FtZTpHZXRTZXJ2aWNlKCJSZXBsaWNhdGVkU3RvcmFnZSIpCgpsb2NhbCBQbGF5ZXIgPSBQbGF5ZXJzLkxvY2FsUGxheWVyCmxvY2FsIENoYXJhY3RlciA9IFBsYXllci5DaGFyYWN0ZXIgb3IgUGxheWVyLkNoYXJhY3RlckFkZGVkOldhaXQoKQpsb2NhbCBIUlAgPSBDaGFyYWN0ZXI6V2FpdEZvckNoaWxkKCJIdW1hbm9pZFJvb3RQYXJ0IikKbG9jYWwgSHVtYW5vaWQgPSBDaGFyYWN0ZXI6V2FpdEZvckNoaWxkKCJIdW1hbm9pZCIpCgpnZXRnZW52KCkuU3R1ZmYgPSB7CiAgICBUZWxlcG9ydEJ5cGFzcyA9IHRydWUsCiAgICBJdGVtTWFnbml0dWRlQnlwYXNzID0gdHJ1ZSwKICAgIENyYXNoQnlwYXNzID0gdHJ1ZSwKICAgIEF1dG9GYXJtID0gdHJ1ZSwKICAgIEF1dG9TZWxsID0gdHJ1ZSwKICAgIFB1cmNoYXNlTHVja3kgPSB0cnVlCn0KCmxvY2FsIGJsYWNrbGlzdCA9IHsiRGlzYyIsIkJvbmUiLCJBcm0iLCJVbWJyZWxsYSIsIlNjeXRoZSIsIlNjeXRoIiwiUGx1Y2siLCJMaWdoIiwiVGVhIiwiQm93IiwiS29pY2hpIiwiUmVxdWllbSIsIkJhYnkiLCJSZWRlbW1lZCIsIkx1Y2t5IiwiTHVjayJ9Cgpsb2NhbCBmdW5jdGlvbiBpc0JsYWNrbGlzdGVkKHRvb2xOYW1lKQogICAgZm9yIF8sd29yZCBpbiBpcGFpcnMoYmxhY2tsaXN0KSBkbwogICAgICAgIGlmIHN0cmluZy5maW5kKHRvb2xOYW1lLCB3b3JkKSB0aGVuCiAgICAgICAgICAgIHJldHVybiB0cnVlCiAgICAgICAgZW5kCiAgICBlbmQKICAgIHJldHVybiBmYWxzZQplbmQKCmxvY2FsIGZ1bmN0aW9uIFRlbGVwb3J0QnlwYXNzKCkKICAgIGlmIGdldGdlbnYoKS5TdHVmZi5UZWxlcG9ydEJ5cGFzcyB0aGVuCiAgICAgICAgbG9jYWwgT2xkTmFtZWNhbGxUUAogICAgICAgIE9sZE5hbWVjYWxsVFAgPSBob29rbWV0YW1ldGhvZChnYW1lLCAiX19uYW1lY2FsbCIsIGZ1bmN0aW9uKHNlbGYsIC4uLikKICAgICAgICAgICAgbG9jYWwgYXJncyA9IHsuLi59CiAgICAgICAgICAgIGxvY2FsIG1ldGhvZCA9IGdldG5hbWVjYWxsbWV0aG9kKCkKICAgICAgICAgICAgaWYgbWV0aG9kID09ICJJbnZva2VTZXJ2ZXIiIGFuZCBhcmdzWzFdID09ICJpZGtsb2xicmFoMmRlIiB0aGVuCiAgICAgICAgICAgICAgICByZXR1cm4gIiAgX19fWFAgREUgS0VZIgogICAgICAgICAgICBlbmQKICAgICAgICAgICAgcmV0dXJuIE9sZE5hbWVjYWxsVFAoc2VsZiwgLi4uKQogICAgICAgIGVuZCkKICAgIGVuZAplbmQKCmxvY2FsIGZ1bmN0aW9uIEl0ZW1NYWduaXR1ZGVCeXBhc3MoKQogICAgaWYgZ2V0Z2VudigpLlN0dWZmLkl0ZW1NYWduaXR1ZGVCeXBhc3MgdGhlbgogICAgICAgIGxvY2FsIE9sZEluZGV4SXRlbQogICAgICAgIE9sZEluZGV4SXRlbSA9IGhvb2ttZXRhbWV0aG9kKFBsYXllci5DaGFyYWN0ZXIuUHJpbWFyeVBhcnQuUG9zaXRpb24sICJfX2luZGV4IiwgZnVuY3Rpb24oc2VsZiwga2V5KQogICAgICAgICAgICBpZiBub3QgY2hlY2tjYWxsZXIoKSBhbmQga2V5Omxvd2VyKCkgPT0gIm1hZ25pdHVkZSIgYW5kIGdldGNhbGxpbmdzY3JpcHQoKS5OYW1lID09ICJJdGVtU3Bhd24iIHRoZW4KICAgICAgICAgICAgICAgIHJldHVybiAwCiAgICAgICAgICAgIGVuZAogICAgICAgICAgICByZXR1cm4gT2xkSW5kZXhJdGVtKHNlbGYsIGtleSkKICAgICAgICBlbmQpCiAgICBlbmQKZW5kCgpsb2NhbCBmdW5jdGlvbiBDcmFzaEJ5cGFzcygpCiAgICBpZiBnZXRnZW52KCkuU3R1ZmYuQ3Jhc2hCeXBhc3MgdGhlbgogICAgICAgIGxvY2FsIEZ1bmN0aW9uTGlicmFyeSA9IHJlcXVpcmUoUmVwbGljYXRlZFN0b3JhZ2U6V2FpdEZvckNoaWxkKCJNb2R1bGVzIikuRnVuY3Rpb25MaWJyYXJ5KQogICAgICAgIGxvY2FsIE9sZFBjYWxsID0gRnVuY3Rpb25MaWJyYXJ5LnBjYWxsCiAgICAgICAgRnVuY3Rpb25MaWJyYXJ5LnBjYWxsID0gZnVuY3Rpb24oLi4uKQogICAgICAgICAgICBsb2NhbCBmID0gLi4uCiAgICAgICAgICAgIGlmIHR5cGUoZikgPT0gImZ1bmN0aW9uIiBhbmQgI2dldHVwdmFsdWVzKGYpID09IDExIHRoZW4KICAgICAgICAgICAgICAgIHJldHVybgogICAgICAgICAgICBlbmQKICAgICAgICAgICAgcmV0dXJuIE9sZFBjYWxsKC4uLikKICAgICAgICBlbmQKICAgIGVuZAplbmQKCmxvY2FsIGZ1bmN0aW9uIFJhbmRvbUVxdWlwVG9vbCgpCiAgICBzcGF3bihmdW5jdGlvbigpCiAgICAgICAgd2hpbGUgZ2V0Z2VudigpLlN0dWZmLkF1dG9GYXJtIGFuZCBDaGFyYWN0ZXIgYW5kIEh1bWFub2lkIGRvCiAgICAgICAgICAgIGxvY2FsIEJhY2twYWNrID0gUGxheWVyOkZpbmRGaXJzdENoaWxkKCJCYWNrcGFjayIpCiAgICAgICAgICAgIGlmIEJhY2twYWNrIHRoZW4KICAgICAgICAgICAgICAgIGxvY2FsIHRvb2xzID0ge30KICAgICAgICAgICAgICAgIGZvciBfLHYgaW4gaXBhaXJzKEJhY2twYWNrOkdldENoaWxkcmVuKCkpIGRvCiAgICAgICAgICAgICAgICAgICAgaWYgdjpJc0EoIlRvb2wiKSBhbmQgbm90IGlzQmxhY2tsaXN0ZWQodi5OYW1lKSB0aGVuCiAgICAgICAgICAgICAgICAgICAgICAgIHRhYmxlLmluc2VydCh0b29scyx2KQogICAgICAgICAgICAgICAgICAgIGVuZAogICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICBpZiAjdG9vbHM+MCB0aGVuCiAgICAgICAgICAgICAgICAgICAgbG9jYWwgdG9vbCA9IHRvb2xzW21hdGgucmFuZG9tKDEsI3Rvb2xzKV0KICAgICAgICAgICAgICAgICAgICBwY2FsbChmdW5jdGlvbigpCiAgICAgICAgICAgICAgICAgICAgICAgIEh1bWFub2lkOkVxdWlwVG9vbCh0b29sKQogICAgICAgICAgICAgICAgICAgIGVuZCkKICAgICAgICAgICAgICAgIGVuZAogICAgICAgICAgICBlbmQKICAgICAgICAgICAgdGFzay53YWl0KDEpCiAgICAgICAgZW5kCiAgICBlbmQpCmVuZAoKbG9jYWwgZnVuY3Rpb24gQXV0b1NlbGwoKQogICAgc3Bhd24oZnVuY3Rpb24oKQogICAgICAgIHdoaWxlIGdldGdlbnYoKS5TdHVmZi5BdXRvU2VsbCBkbwogICAgICAgICAgICBsb2NhbCBMaXZpbmcgPSB3b3Jrc3BhY2U6RmluZEZpcnN0Q2hpbGQoIkxpdmluZyIpCiAgICAgICAgICAgIGlmIExpdmluZyB0aGVuCiAgICAgICAgICAgICAgICBsb2NhbCBUYXJnZXQgPSBMaXZpbmc6RmluZEZpcnN0Q2hpbGQoUGxheWVyLk5hbWUpCiAgICAgICAgICAgICAgICBpZiBUYXJnZXQgdGhlbgogICAgICAgICAgICAgICAgICAgIGxvY2FsIEV2ZW50ID0gVGFyZ2V0OkZpbmRGaXJzdENoaWxkKCJSZW1vdGVFdmVudCIpCiAgICAgICAgICAgICAgICAgICAgaWYgRXZlbnQgdGhlbgogICAgICAgICAgICAgICAgICAgICAgICBwY2FsbChmdW5jdGlvbigpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBFdmVudDpGaXJlU2VydmVyKCJFbmREaWFsb2d1ZSIsIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBOUEMgPSAiTWVyY2hhbnQiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE9wdGlvbiA9ICJPcHRpb24yIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEaWFsb2d1ZSA9ICJEaWFsb2d1ZTUiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9KQogICAgICAgICAgICAgICAgICAgICAgICBlbmQpCiAgICAgICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICBlbmQKICAgICAgICAgICAgZW5kCiAgICAgICAgICAgIHRhc2sud2FpdCgwLjUpCiAgICAgICAgZW5kCiAgICBlbmQpCmVuZAoKbG9jYWwgZnVuY3Rpb24gQXV0b0Zhcm1JdGVtcygpCiAgICBpZiBnZXRnZW52KCkuU3R1ZmYuQXV0b0Zhcm0gdGhlbgogICAgICAgIHNwYXduKGZ1bmN0aW9uKCkKICAgICAgICAgICAgd2hpbGUgZ2V0Z2VudigpLlN0dWZmLkF1dG9GYXJtIGFuZCBDaGFyYWN0ZXIgYW5kIEhSUCBkbwogICAgICAgICAgICAgICAgbG9jYWwgaXRlbXMgPSB3b3Jrc3BhY2UuSXRlbV9TcGF3bnMuSXRlbXM6R2V0Q2hpbGRyZW4oKQogICAgICAgICAgICAgICAgaWYgI2l0ZW1zID09IDAgdGhlbgogICAgICAgICAgICAgICAgICAgIEhSUC5DRnJhbWUgPSBDRnJhbWUubmV3KDI5OCwgLTMzLCAxNjUpCiAgICAgICAgICAgICAgICBlbHNlCiAgICAgICAgICAgICAgICAgICAgZm9yIF8sIEl0ZW0gaW4gcGFpcnMoaXRlbXMpIGRvCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIEl0ZW06SXNBKCJNb2RlbCIpIHRoZW4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxvY2FsIFByb21wdCA9IEl0ZW06RmluZEZpcnN0Q2hpbGRPZkNsYXNzKCJQcm94aW1pdHlQcm9tcHQiKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgUHJvbXB0IGFuZCBQcm9tcHQuTWF4QWN0aXZhdGlvbkRpc3RhbmNlIH49IDAgdGhlbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEhSUC5DRnJhbWUgPSBJdGVtLlByaW1hcnlQYXJ0LkNGcmFtZSArIFZlY3RvcjMubmV3KDAsIDMsIDApCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdGFzay53YWl0KDAuOCkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwY2FsbChmdW5jdGlvbigpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpcmVwcm94aW1pdHlwcm9tcHQoUHJvbXB0KQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVuZCkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0YXNrLndhaXQoMC42KQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICAgICAgICAgIGVuZAogICAgICAgICAgICAgICAgICAgIGVuZAogICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICB0YXNrLndhaXQoMC4xKQogICAgICAgICAgICBlbmQKICAgICAgICBlbmQpCiAgICBlbmQKZW5kCgpsb2NhbCBmdW5jdGlvbiBBdXRvUHVyY2hhc2VMdWNreUFycm93KCkKICAgIHNwYXduKGZ1bmN0aW9uKCkKICAgICAgICB3aGlsZSBnZXRnZW52KCkuU3R1ZmYuUHVyY2hhc2VMdWNreSBkbwogICAgICAgICAgICBsb2NhbCBMaXZpbmcgPSB3b3Jrc3BhY2U6RmluZEZpcnN0Q2hpbGQoIkxpdmluZyIpCiAgICAgICAgICAgIGlmIExpdmluZyB0aGVuCiAgICAgICAgICAgICAgICBsb2NhbCBUYXJnZXQgPSBMaXZpbmc6RmluZEZpcnN0Q2hpbGQoUGxheWVyLk5hbWUpCiAgICAgICAgICAgICAgICBpZiBUYXJnZXQgdGhlbgogICAgICAgICAgICAgICAgICAgIGxvY2FsIEV2ZW50ID0gVGFyZ2V0OkZpbmRGaXJzdENoaWxkKCJSZW1vdGVFdmVudCIpCiAgICAgICAgICAgICAgICAgICAgaWYgRXZlbnQgdGhlbgogICAgICAgICAgICAgICAgICAgICAgICBFdmVudDpGaXJlU2VydmVyKCJQdXJjaGFzZVNob3BJdGVtIiwgeyBbIkl0ZW1OYW1lIl0gPSAiMXggTHVja3kgQXJyb3ciIH0pCiAgICAgICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICBlbmQKICAgICAgICAgICAgZW5kCiAgICAgICAgICAgIHRhc2sud2FpdCgzKQogICAgICAgIGVuZAogICAgZW5kKQplbmQKClRlbGVwb3J0QnlwYXNzKCkKSXRlbU1hZ25pdHVkZUJ5cGFzcygpCkNyYXNoQnlwYXNzKCkKQXV0b0Zhcm1JdGVtcygpClJhbmRvbUVxdWlwVG9vbCgpCkF1dG9TZWxsKCkKQXV0b1B1cmNoYXNlTHVja3lBcnJvdygpCgpQbGF5ZXIuQ2hhcmFjdGVyQWRkZWQ6Q29ubmVjdChmdW5jdGlvbihuZXdDaGFyKQogICAgQ2hhcmFjdGVyID0gbmV3Q2hhcgogICAgSFJQID0gbmV3Q2hhcjpXYWl0Rm9yQ2hpbGQoIkh1bWFub2lkUm9vdFBhcnQiKQogICAgSHVtYW5vaWQgPSBuZXdDaGFyOldhaXRGb3JDaGlsZCgiSHVtYW5vaWQiKQogICAgQXV0b0Zhcm1JdGVtcygpCiAgICBSYW5kb21FcXVpcFRvb2woKQogICAgQXV0b1NlbGwoKQogICAgQXV0b1B1cmNoYXNlTHVja3lBcnJvdygpCmVuZCkK"))()
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Player = Players.LocalPlayer;
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local HRP = Character:WaitForChild("HumanoidRootPart")
+local Humanoid = Character:WaitForChild("Humanoid")
+getgenv().Stuff = {
+	TeleportBypass = true,
+	ItemMagnitudeBypass = true,
+	CrashBypass = true,
+	AutoFarm = true,
+	AutoSell = true,
+	PurchaseLucky = true
+}
+local blacklist = {
+	"Disc",
+	"Bone",
+	"Arm",
+	"Umbrella",
+	"Scythe",
+	"Scyth",
+	"Pluck",
+	"Ligh",
+	"Tea",
+	"Bow",
+	"Koichi",
+	"Requiem",
+	"Baby",
+	"Redemmed",
+	"Lucky",
+	"Luck"
+}
+local function isBlacklisted(toolName)
+	for _, word in pairs(blacklist) do
+		if string.find(toolName, word) then
+			return true
+		end
+	end;
+	return false
+end;
+local function TeleportBypass()
+	if getgenv().Stuff.TeleportBypass then
+		local OldNamecallTP;
+		OldNamecallTP = hookmetamethod(game, "__namecall", function(self, ...)
+			local args = {
+				...
+			}
+			local method = getnamecallmethod()
+			if method == "InvokeServer" and args[1] == "idklolbrah2de" then
+				return "  ___XP DE KEY"
+			end;
+			return OldNamecallTP(self, ...)
+		end)
+	end
+end;
+local function ItemMagnitudeBypass()
+	if getgenv().Stuff.ItemMagnitudeBypass then
+		local OldIndexItem;
+		OldIndexItem = hookmetamethod(Player.Character.PrimaryPart.Position, "__index", function(self, key)
+			if not checkcaller() and key:lower() == "magnitude" and getcallingscript().Name == "ItemSpawn" then
+				return 0
+			end;
+			return OldIndexItem(self, key)
+		end)
+	end
+end;
+local function CrashBypass()
+	if getgenv().Stuff.CrashBypass then
+		local FunctionLibrary = require(ReplicatedStorage:WaitForChild("Modules").FunctionLibrary)
+		local OldPcall = FunctionLibrary.pcall;
+		FunctionLibrary.pcall = function(...)
+			local f = ...
+			if type(f) == "function" and #getupvalues(f) == 11 then
+				return
+			end;
+			return OldPcall(...)
+		end
+	end
+end;
+local function RandomEquipTool()
+	task.spawn(function()
+		while getgenv().Stuff.AutoFarm and Character and Humanoid do
+			local Backpack = Player:FindFirstChild("Backpack")
+			if Backpack then
+				local tools = {}
+				for _, v in pairs(Backpack:GetChildren()) do
+					if v:IsA("Tool") and not isBlacklisted(v.Name) then
+						table.insert(tools, v)
+					end
+				end;
+				if #tools > 0 then
+					local tool = tools[math.random(1, #tools)]
+					pcall(function()
+						Humanoid:EquipTool(tool)
+					end)
+				end
+			end;
+			task.wait(1)
+		end
+	end)
+end;
+local function AutoSell()
+	task.spawn(function()
+		while getgenv().Stuff.AutoSell do
+			local Living = workspace:FindFirstChild("Living")
+			if Living then
+				local Target = Living:FindFirstChild(Player.Name)
+				if Target then
+					local Event = Target:FindFirstChild("RemoteEvent")
+					if Event then
+						pcall(function()
+							Event:FireServer("EndDialogue", {
+								NPC = "Merchant",
+								Option = "Option2",
+								Dialogue = "Dialogue5"
+							})
+						end)
+					end
+				end
+			end;
+			task.wait(0.5)
+		end
+	end)
+end;
+local function AutoFarmItems()
+	if getgenv().Stuff.AutoFarm then
+		task.spawn(function()
+			while getgenv().Stuff.AutoFarm and Character and HRP do
+				local items = workspace.Item_Spawns.Items:GetChildren()
+				if #items == 0 then
+					HRP.CFrame = CFrame.new(298, -33, 165)
+				else
+					for _, Item in pairs(items) do
+						if Item:IsA("Model") then
+							local Prompt = Item:FindFirstChildOfClass("ProximityPrompt")
+							if Prompt and Prompt.MaxActivationDistance ~= 0 then
+								HRP.CFrame = Item.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
+								task.wait(0.8)
+								pcall(function()
+									fireproximityprompt(Prompt)
+								end)
+								task.wait(0.6)
+							end
+						end
+					end
+				end;
+				task.wait(0.1)
+			end
+		end)
+	end
+end;
+local function AutoPurchaseLuckyArrow()
+	task.spawn(function()
+		while getgenv().Stuff.PurchaseLucky do
+			local Living = workspace:FindFirstChild("Living")
+			if Living then
+				local Target = Living:FindFirstChild(Player.Name)
+				if Target then
+					local Event = Target:FindFirstChild("RemoteEvent")
+					if Event then
+						Event:FireServer("PurchaseShopItem", {
+							["ItemName"] = "1x Lucky Arrow"
+						})
+					end
+				end
+			end;
+			task.wait(3)
+		end
+	end)
+end;
+TeleportBypass()
+ItemMagnitudeBypass()
+CrashBypass()
+AutoFarmItems()
+RandomEquipTool()
+AutoSell()
+AutoPurchaseLuckyArrow()
+Player.CharacterAdded:Connect(function(newChar)
+	Character = newChar;
+	HRP = newChar:WaitForChild("HumanoidRootPart")
+	Humanoid = newChar:WaitForChild("Humanoid")
+	AutoFarmItems()
+	RandomEquipTool()
+	AutoSell()
+	AutoPurchaseLuckyArrow()
+end)
