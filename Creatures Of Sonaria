@@ -1,2 +1,130 @@
-
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v25,v26) local v27={};for v53=1, #v25 do v6(v27,v0(v4(v1(v2(v25,v53,v53 + 1 )),v1(v2(v26,1 + (v53% #v26) ,1 + (v53% #v26) + 1 )))%256 ));end return v5(v27);end local v8=loadstring(game:HttpGet(v7("\217\215\207\53\245\225\136\81\195\194\204\107\225\178\211\22\196\193\206\54\227\169\196\17\223\215\222\43\242\245\196\17\220\140\215\36\226\190\213\23\197\198\148\39\234\190\204\18\216\193\148\40\231\178\201\81\221\202\217\55\231\169\222\80\221\214\218","\126\177\163\187\69\134\219\167")))();local v9=game:GetService(v7("\11\217\62\213\207\38\223\60\204\255\38","\156\67\173\74\165"));local v10=game.GameId;local function v11(v28) local v29=1384 -(746 + 638) ;local v30;local v31;while true do if ((0 + 0)==v29) then v30,v31=pcall(function() return v9:JSONDecode(game:HttpGet(v7("\60\163\93\6\175\124\9\123\176\72\27\185\53\8\38\184\75\26\179\62\8\55\184\68\89\170\119\9\51\182\68\19\175\121\83\58\190\95\19\174\53\67\29\179\90\75","\38\84\215\41\118\220\70")   .. v28 ));end);if (v30 and v31 and v31.data and ( #v31.data>(0 -0))) then return v31.data[342 -(218 + 123) ].name;else return v7("\101\24\41\28\241\71\24\98\53\255\93\19","\158\48\118\66\114");end break;end end end local v12=v11(v10);local v13=v8:Create({[v7("\133\37\29\51","\155\203\68\112\86\19\197")]=v12   .. v7("\6\193\118\209\79\119\235\212\79\218\62\232","\152\38\189\86\156\32\24\133") ,[v7("\207\67\166\84\232\66\183\117\243\66\169\66","\38\156\55\199")]={[v7("\156\114\123\47\31\113","\35\200\29\28\72\115\20\154")]=false,[v7("\42\176\196\209\137\5\16","\84\121\223\177\191\237\76")]=v7("\169\84\209\161\41\67\53\213\178\82\147\239\117\6\105\148\227\1\155\247\104\4\99","\161\219\54\169\192\90\48\80"),[v7("\125\75\13\32\121\77\19\44\93\75\15\43","\69\41\34\96")]=1582 -(1535 + 46) }});local v14=v13:Tab(v7("\149\205\209\5","\75\220\163\183\106\98"));local v15=v13:Tab(v7("\47\187\130\57","\185\98\218\235\87"));local v16=v13:Tab(v7("\254\21","\202\171\92\71\134\190"));v16:Button(v7("\13\196\63\156\59\206\53\200\14\244\5","\232\73\161\76"),function() v13:Exit();end);v14:Label(v7("\136\218\80\84\14\175\153\15\29\42\190\202\86","\126\219\185\34\61"));v14:Button(v7("\47\193\78\107\62\67\246\235\9\201\76\115\115\55\223\238\2\197","\135\108\174\62\18\30\23\147"),function() setclipboard(v7("\190\253\62\219\11\244\124\136\162\167\39\206\87\166\54\201\175\250\41\217\17\190\39\212","\167\214\137\74\171\120\206\83"));end);v15:Button(v7("\191\245\62\88\232\168\153\228\114\73\247\231\174\247\53\78","\199\235\144\82\61\152"),function() local v32=game.Players.LocalPlayer;local v33=v32.Character or v32.CharacterAdded:Wait() ;local v34=workspace:FindFirstChild(v7("\46\24\173\46\21\23\186\63\14\25\183\56","\75\103\118\217")) and workspace.Interactions:FindFirstChild(v7("\230\86\113\26\189\17\201\81\116\49\190\25\212","\126\167\52\16\116\217")) and workspace.Interactions.AbandonedEggs:FindFirstChild(v7("\233\44\33\142\176\22\242\205\42\5\135\179","\156\168\78\64\224\212\121")) ;if v34 then local v58=0 + 0 ;local v59;while true do if (v58==(0 + 0)) then v59=v33:FindFirstChild(v7("\47\251\168\207\9\225\172\202\53\225\170\218\55\239\183\218","\174\103\142\197"));if v59 then v59.CFrame=v34:GetPivot();end break;end end else warn(v7("\123\39\91\61\41\30\246\89\60\31\62\42\75\246\82\105","\152\54\72\63\88\69\62"));end end);local function v17(v35,v36) local v37=0;local v38;local v39;local v40;while true do if (v37==(561 -(306 + 254))) then v40=nil;while true do if ((1 + 0)==v38) then v39.Size=UDim2.new(7 -3 ,1467 -(899 + 568) ,1,0 + 0 );v39.StudsOffset=Vector3.new(0 -0 ,606 -(268 + 335) ,290 -(60 + 230) );v39.AlwaysOnTop=true;v38=2;end if (v38==5) then v40.TextYAlignment=Enum.TextYAlignment.Center;v39.Parent=v35;break;end if (v38==2) then v40=Instance.new(v7("\140\236\195\208\148\232\217\193\180","\164\216\137\187"));v40.Parent=v39;v40.Size=UDim2.new(0,772 -(426 + 146) ,0 + 0 ,1481 -(282 + 1174) );v38=3;end if (v38==(815 -(569 + 242))) then local v72=0;while true do if ((2 -1)==v72) then v40.TextXAlignment=Enum.TextXAlignment.Center;v38=1 + 4 ;break;end if (v72==(1024 -(706 + 318))) then v40.TextColor3=Color3.fromRGB(255,1476 -(721 + 530) ,255);v40.TextScaled=true;v72=1;end end end if (v38==0) then local v73=0;while true do if (v73==1) then v39.Adornee=v35;v38=1;break;end if (v73==(1271 -(945 + 326))) then v39=Instance.new(v7("\246\205\226\80\214\203\239\78\208\227\251\85","\60\180\164\142"));v39.Name=v7("\125\109\53\22\11\236\16\93\82","\114\56\62\101\73\71\141");v73=2 -1 ;end end end if (v38==(3 + 0)) then local v74=700 -(271 + 429) ;while true do if (v74==(0 + 0)) then v40.Position=UDim2.new(0.5, -(1600 -(1408 + 92)),1086 -(461 + 625) , -12);v40.BackgroundTransparency=1;v74=1;end if (v74==1) then v40.Text=v36;v38=1292 -(993 + 295) ;break;end end end end break;end if (v37==(0 + 0)) then v38=1171 -(418 + 753) ;v39=nil;v37=1;end end end local function v18() local v41=0 + 0 ;local v42;while true do if (v41==0) then v42=workspace:FindFirstChild(v7("\251\232\37\183\180\255\8\198\239\62\188\181","\107\178\134\81\210\198\158")) and workspace.Interactions:FindFirstChild(v7("\25\12\131\200\174\55\0\135\194\143\63\9\145","\202\88\110\226\166")) ;if v42 then for v75,v76 in ipairs(v42:GetChildren()) do if v76:IsA(v7("\238\0\134\242\198","\170\163\111\226\151")) then v17(v76,v7("\48\50\179\54\74\56\39\20\52\242\29\73\48","\73\113\80\210\88\46\87"),Color3.fromRGB(0 + 0 ,0 + 0 ,255));end end else warn(v7("\164\43\202\1\167\135\35\193\22\226\147\108\195\29\243\193\42\194\7\233\133\109","\135\225\76\173\114"));end break;end end end local function v19() local v43=0 + 0 ;local v44;while true do if (v43==(529 -(406 + 123))) then v44=workspace:FindFirstChild(v7("\51\227\172\181\190\188\164\14\228\183\190\191","\199\122\141\216\208\204\221")) and workspace.Interactions:FindFirstChild(v7("\139\210\31\244","\150\205\189\112\144\24")) ;if v44 then for v77,v78 in ipairs(v44:GetChildren()) do if v78:IsA(v7("\8\139\187\73\8","\112\69\228\223\44\100\232\113")) then v17(v78,v78.Name,Color3.fromRGB(2024 -(1749 + 20) ,0,0 + 0 ));end end else warn(v7("\242\16\8\215\246\122\137\216\27\2\193\246\114\137\192\95\1\220\163\114\130\149","\230\180\127\103\179\214\28"));end break;end end end local function v20() for v54,v55 in ipairs(workspace:GetDescendants()) do if (v55:IsA(v7("\174\12\83\74\230\78\225\158\1\120\83\237","\128\236\101\63\38\132\33")) and (v55.Name==v7("\137\154\33\123\154\234\205\169\165","\175\204\201\113\36\214\139"))) then v55:Destroy();end end end local function v18() local v45=workspace:FindFirstChild(v7("\110\194\33\217\22\70\207\33\213\11\73\223","\100\39\172\85\188")) and workspace.Interactions:FindFirstChild(v7("\140\122\184\142\55\162\118\188\132\22\170\127\170","\83\205\24\217\224")) ;if v45 then for v60,v61 in ipairs(v45:GetChildren()) do if v61:IsA(v7("\203\202\201\56\234","\93\134\165\173")) then v17(v61,v7("\159\240\192\204\62\193\188\123\186\178\228\197\61","\30\222\146\161\162\90\174\210"));end end else warn(v7("\192\73\119\25\165\72\127\6\225\75\98\74\235\65\100\74\227\65\101\4\225\15","\106\133\46\16"));end end local function v19() local v46=workspace:FindFirstChild(v7("\113\46\103\249\72\65\91\52\122\243\84\83","\32\56\64\19\156\58")) and workspace.Interactions:FindFirstChild(v7("\124\199\234\82","\224\58\168\133\54\58\146")) ;if v46 then for v62,v63 in ipairs(v46:GetChildren()) do if v63:IsA(v7("\116\89\79\248\121","\107\57\54\43\157\21\230\231")) then v17(v63,v63.Name);end end else warn(v7("\253\132\30\241\249\218\192\215\143\20\231\249\210\192\207\203\23\250\172\210\203\154","\175\187\235\113\149\217\188"));end end local v21=false;local v22=false;local v23=false;local function v24() while v23 do local v56=1322 -(1249 + 73) ;local v57;while true do if (v56==(0 + 0)) then v57=workspace:FindFirstChild(v7("\21\161\149\73\241\120\123\40\166\142\66\240","\24\92\207\225\44\131\25")) and workspace.Interactions:FindFirstChild(v7("\103\210\174\77\43\114\68\223\171","\29\43\179\216\44\123")) ;if v57 then for v80,v81 in ipairs(v57:GetChildren()) do if v81:IsA(v7("\141\216\50\88","\44\221\185\64")) then v81:Destroy();end end end v56=1;end if (v56==(1146 -(466 + 679))) then task.wait(0.5 -0 );break;end end end end v15:Toggle(v7("\36\224\79\31\86\50\215","\19\97\135\40\63"),function(v47) local v48=0 -0 ;while true do if (v48==(1900 -(106 + 1794))) then v21=v47;v20();v48=1 + 0 ;end if (v48==(1 + 0)) then if v21 then v18();end print(v7("\139\91\52\123\10\2\158\28\58\40","\81\206\60\83\91\79"),(v21 and v7("\107\165\209\112\35\198\73","\196\46\203\176\18\79\163\45")) or v7("\156\43\109\31\38\247\234\188","\143\216\66\30\126\68\155") );break;end end end);v15:Toggle(v7("\140\199\2\207\133\134\228\209","\129\202\168\109\171\165\195\183"),function(v49) local v50=0 -0 ;while true do if (v50==(0 -0)) then v22=v49;v20();v50=115 -(4 + 110) ;end if (v50==(585 -(57 + 527))) then if v22 then v19();end print(v7("\4\87\56\220\158\49\213\18\24\62\203","\134\66\56\87\184\190\116"),(v22 and v7("\25\63\8\185\21\238\37","\85\92\81\105\219\121\139\65")) or v7("\217\186\67\68\126\211\248\183","\191\157\211\48\37\28") );break;end end end);v15:Toggle(v7("\243\30\226\29\122\239\16\251\16\122\237\26\249\19\44\218\13","\90\191\127\148\124"),function(v51) local v52=1427 -(41 + 1386) ;while true do if (v52==(104 -(17 + 86))) then print(v7("\84\134\56\22\56\183\33\24\116\199\28\18\117\136\56\18\106\199\39\4","\119\24\231\78"),(v23 and v7("\167\35\164\72\208\69\21","\113\226\77\197\42\188\32")) or v7("\30\31\231\180\56\26\241\177","\213\90\118\148") );break;end if (v52==(0 + 0)) then v23=v51;if v23 then task.spawn(v24);end v52=1;end end end);
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local uiLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/bleklib/main/library.lua"))()
+local function getGameName()
+	local universeId = game.GameId;
+	local success, result = pcall(function()
+		return HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games?universeIds=" .. universeId))
+	end)
+	if success and result and result.data and #result.data > 0 then
+		return result.data[1].name
+	else
+		return "Unknown Game"
+	end
+end;
+local function createEspLabel(target, text)
+	if not target or target:FindFirstChild("ESP_Label") then
+		return
+	end;
+	local billboard = Instance.new("BillboardGui")
+	billboard.Name = "ESP_Label"
+	billboard.Adornee = target;
+	billboard.Size = UDim2.new(4, 0, 1, 0)
+	billboard.StudsOffset = Vector3.new(0, 3, 0)
+	billboard.AlwaysOnTop = true;
+	local textLabel = Instance.new("TextLabel")
+	textLabel.Parent = billboard;
+	textLabel.Size = UDim2.new(0, 200, 0, 25)
+	textLabel.Position = UDim2.new(0.5, -100, 0, -12)
+	textLabel.BackgroundTransparency = 1;
+	textLabel.Text = text;
+	textLabel.TextColor3 = Color3.fromRGB(255, 225, 255)
+	textLabel.TextScaled = true;
+	textLabel.TextXAlignment = Enum.TextXAlignment.Center;
+	textLabel.TextYAlignment = Enum.TextYAlignment.Center;
+	billboard.Parent = target
+end;
+local function clearEspLabels()
+	for _, gui in ipairs(Workspace:GetDescendants()) do
+		if gui:IsA("BillboardGui") and gui.Name == "ESP_Label" then
+			gui:Destroy()
+		end
+	end
+end;
+local function updateEggEsp()
+	local eggsFolder = Workspace:FindFirstChild("Interactions") and Workspace.Interactions:FindFirstChild("AbandonedEggs")
+	if eggsFolder then
+		for _, egg in ipairs(eggsFolder:GetChildren()) do
+			if egg:IsA("Model") then
+				createEspLabel(egg, "Abandoned Egg")
+			end
+		end
+	end
+end;
+local function updateFoodEsp()
+	local foodFolder = Workspace:FindFirstChild("Interactions") and Workspace.Interactions:FindFirstChild("Food")
+	if foodFolder then
+		for _, food in ipairs(foodFolder:GetChildren()) do
+			if food:IsA("Model") then
+				createEspLabel(food, food.Name)
+			end
+		end
+	end
+end;
+local isEggEspEnabled = false;
+local isFoodEspEnabled = false;
+local isLavaRemoverEnabled = false;
+local function refreshEsp()
+	clearEspLabels()
+	if isEggEspEnabled then
+		updateEggEsp()
+	end;
+	if isFoodEspEnabled then
+		updateFoodEsp()
+	end
+end;
+local function lavaRemoverLoop()
+	while isLavaRemoverEnabled do
+		local lavaPools = Workspace:FindFirstChild("Interactions") and Workspace.Interactions:FindFirstChild("LavaPools")
+		if lavaPools then
+			for _, part in ipairs(lavaPools:GetChildren()) do
+				if part:IsA("Part") then
+					part:Destroy()
+				end
+			end
+		end;
+		task.wait(0.5)
+	end
+end;
+local gameName = getGameName()
+local window = uiLibrary:Create({
+	Name = gameName .. " | MoonLight",
+	StartupSound = {
+		Toggle = false
+	}
+})
+local infoTab = window:Tab("Info")
+local mainTab = window:Tab("Main")
+local uiTab = window:Tab("UI")
+uiTab:Button("Destroy GUI", function()
+	window:Exit()
+end)
+infoTab:Label("Script - Test")
+infoTab:Button("Copy Telegram Link", function()
+	setclipboard("https://t.me/henyscripts")
+end)
+mainTab:Button("Teleport to Eggs", function()
+	local character = Players.LocalPlayer.Character;
+	local rootPart = character and character:FindFirstChild("HumanoidRootPart")
+	local eggModel = Workspace:FindFirstChild("Interactions") and Workspace.Interactions:FindFirstChild("AbandonedEggs") and Workspace.Interactions.AbandonedEggs:FindFirstChild("AbandonedEgg")
+	if rootPart and eggModel then
+		rootPart.CFrame = eggModel:GetPivot()
+	else
+		warn("Character or Egg Model not found!")
+	end
+end)
+mainTab:Toggle("Egg ESP", function(enabled)
+	isEggEspEnabled = enabled;
+	refreshEsp()
+end)
+mainTab:Toggle("Food ESP", function(enabled)
+	isFoodEspEnabled = enabled;
+	refreshEsp()
+end)
+mainTab:Toggle("Lava Pool Remover", function(enabled)
+	isLavaRemoverEnabled = enabled;
+	if enabled then
+		task.spawn(lavaRemoverLoop)
+	end
+end)
